@@ -1,0 +1,13 @@
+#!/bin/bash
+
+read -p "Enter Num" size
+
+for ((i=1;i<=size;i++))
+do
+for ((j=1;j<=i;j++))
+do
+echo -ne "*"
+done
+echo ""
+done
+

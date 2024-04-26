@@ -1,0 +1,22 @@
+#!/bin/bash
+
+read -p "Enter a Num - " num
+count=0
+size=$num/2
+
+
+for (( i=2; i<=$size; i++ ))
+do
+if (( $num % $i == 0 ))
+then
+count=$count+1
+fi
+done
+
+if (( $count == 0 ))
+then 
+echo "Prime"
+else
+echo "Not Prime"
+fi
+

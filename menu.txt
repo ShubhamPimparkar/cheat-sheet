@@ -1,0 +1,33 @@
+#!/bin/bash
+ch=1
+while [ $ch -ne 0 ]
+do
+
+echo -e "Choose a option \n1.Add\n2.Sub\n3.Multi\n0.Exit\n"
+read ch
+
+case $ch in
+1)
+read -p "Enter num1 - " num1
+read -p "Enter num2 - " num2
+
+add=$(echo "$num1 + $num2" |bc )
+echo "Add is - $add"
+;;
+2)
+read -p "Enter num1 - " num1
+read -p "Enter num2 - " num2
+
+sub=$(echo "$num1 - $num2" |bc )
+echo "Sub is - $sub"
+;;
+3)
+read -p "Enter num1 - " num1
+read -p "Enter num2 - " num2
+
+mul=$(echo "$num1 * $num2" |bc )
+echo "Multi is - $mul"
+;;
+esac
+done
+
